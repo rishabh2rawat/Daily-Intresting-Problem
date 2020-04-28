@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class Findpi
+class Answer21April2020
 {
     public static void main(String[] args) {
         int pointic=0;                              //points inside circle 
