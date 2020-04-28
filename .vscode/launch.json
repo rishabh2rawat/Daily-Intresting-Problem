@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Answer24April2020",
+            "request": "launch",
+            "mainClass": "Answer24April2020",
+            "projectName": "Daily-Intresting-Problem_a0f76531"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
