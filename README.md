@@ -35,4 +35,5 @@ Arrays
 | No  | Questions | GeeksforGeeks_link |
 | ------------- | ------------- | ------------- |
 | 1.  | [Reverse The Array](https://github.com/rishabh2rawat/Daily-Intresting-Problem/blob/master/Arrays_First_Topic/ReverseTheArray.java)  | [![alt text](https://user-images.githubusercontent.com/20839643/118395915-98b94780-b66a-11eb-8267-a25584a0e4b9.jpeg "Logo Title Text 1")](https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string) |
+| 2.  | [Find Max Min From Array](https://github.com/rishabh2rawat/Daily-Intresting-Problem/blob/master/Arrays_First_Topic/FindMaxMinFromArray.java)  | [![alt text](https://user-images.githubusercontent.com/20839643/118395915-98b94780-b66a-11eb-8267-a25584a0e4b9.jpeg "Logo Title Text 1")](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/) |
     
