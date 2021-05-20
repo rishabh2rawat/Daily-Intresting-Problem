@@ -7,7 +7,7 @@ public class Sort012 {
     public static void main(String[] args) {
         int [] array=new int[]{1,0,2,1,2,0};
         printArray(array);
-        array=sortArray(array);
+        array= sortArray(array);
         printArray(array);
 
     }
@@ -16,21 +16,22 @@ public class Sort012 {
     {
         int start=0;
         int end=array.length-1;
-        for(int i=0;i<=end;i++)
+        int current =0;
+        while(current<end)
         {
-            if(array[i]==1)
+            if(array[current]==1)
             {
-                continue;
+                current++;
             }
-            else if(array[i]==0)
+            else if(array[current]==0)
             {
-                array[i]=array[start];
+                array[current]=array[start];
                 array[0]=0;
                 start += 1;
             }
-            else if(array[i]==2)
+            else if(array[current]==2)
             {
-                array[i]=array[end];
+                array[current]=array[end];
                 array[end]=2;
                 end -= 1;
             }

@@ -11,9 +11,6 @@ public class ReverseTheArray {
         printArray(array);          // printing Initial Array
         array= reverseArray(array); // reversing array
         printArray(array);          // printing updated array
-
-
-
     }
 
     public static int[] reverseArray(int[] array)
