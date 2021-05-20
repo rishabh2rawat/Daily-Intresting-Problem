@@ -1,9 +1,0 @@
-The problem was recently asked by google
-
-Given the list of no and a no k , return weather two no from the list add up to k 
-
-for example Given [10, 15 , 3, 7] and k= 17 , retun true 
-
-since 10 +7 =17
-
-Bonus == can you do this in one pass
