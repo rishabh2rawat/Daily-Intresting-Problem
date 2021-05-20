@@ -7,7 +7,7 @@ public class Sort012 {
     public static void main(String[] args) {
         int [] array=new int[]{1,0,2,1,2,0};
         printArray(array);
-        array= sortArray(array);
+        sortArray(array);
         printArray(array);
 
     }
