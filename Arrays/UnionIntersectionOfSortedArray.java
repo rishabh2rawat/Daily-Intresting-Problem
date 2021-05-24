@@ -3,8 +3,6 @@ package Arrays;
 import java.util.Arrays;
 
 public class UnionIntersectionOfSortedArray {
-    int []unionArray;
-
     public static void main(String[] args) {
         int []array1=new int[]{1,5,5,5,9,12,15,16};
         int []array2=new int[]{3,4,15,16,17,18};
@@ -28,7 +26,7 @@ public class UnionIntersectionOfSortedArray {
         int unionCurrent=1;
         int intersactionCounter=0;
         int []unionArray=new int[l1+l2+1];
-        int []intersactionArray =new int[l1>l2 ? l1 : l2 ];
+        int []intersactionArray =new int[Math.max(l1, l2)];
 
         while(start1<l1 || start2<l2) {
           if ( start1<l1 ) {
@@ -36,12 +34,8 @@ public class UnionIntersectionOfSortedArray {
                   if(unionArray[unionCurrent-1]!=array1[start1])
                   {
                       unionArray[unionCurrent++] = array1[start1];
-                      start1++;
                   }
-                  else
-                  {
-                      start1++;
-                  }
+                  start1++;
 
               }
             }
@@ -50,13 +44,8 @@ public class UnionIntersectionOfSortedArray {
              {
                  if(unionArray[unionCurrent-1]!=array2[start2]) {
                      unionArray[unionCurrent++] = array2[start2];
-                     start2++;
                  }
-                else
-                 {
-                     start2 ++;
-                 }
-
+                 start2++;
              }
 
             }
