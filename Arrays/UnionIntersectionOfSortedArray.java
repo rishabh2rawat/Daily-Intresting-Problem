@@ -6,10 +6,8 @@ public class UnionIntersectionOfSortedArray {
     int []unionArray;
 
     public static void main(String[] args) {
-        int []array1=new int[]{1,5,9,12,15,16};
+        int []array1=new int[]{1,5,5,5,9,12,15,16};
         int []array2=new int[]{3,4,15,16,17,18};
-
-
 
         printArray("First Array : " , array1);
         printArray("Second Array : ", array2);
@@ -27,29 +25,45 @@ public class UnionIntersectionOfSortedArray {
         int start1=0;
         int start2=0;
 
-        int unionCurrent=0;
+        int unionCurrent=1;
         int intersactionCounter=0;
-        int []unionArray=new int[l1+l2];
+        int []unionArray=new int[l1+l2+1];
         int []intersactionArray =new int[l1>l2 ? l1 : l2 ];
 
         while(start1<l1 || start2<l2) {
           if ( start1<l1 ) {
               if( start2>= l2 || array1[start1] < array2[start2]) {
-                  unionArray[unionCurrent++] = array1[start1];
-                  start1++;
+                  if(unionArray[unionCurrent-1]!=array1[start1])
+                  {
+                      unionArray[unionCurrent++] = array1[start1];
+                      start1++;
+                  }
+                  else
+                  {
+                      start1++;
+                  }
+
               }
             }
           if ( start2 <l2) {
              if( start1>=l1 || array1[start1] > array2[start2])
              {
-                 unionArray[unionCurrent++] = array2[start2];
-                 start2++;
+                 if(unionArray[unionCurrent-1]!=array2[start2]) {
+                     unionArray[unionCurrent++] = array2[start2];
+                     start2++;
+                 }
+                else
+                 {
+                     start2 ++;
+                 }
+
              }
 
             }
           if ( start1<l1 && start2<l2) {
              if(array1[start1] == array2[start2])
              {
+
                  unionArray[unionCurrent++] = array1[start1];
                  intersactionArray[intersactionCounter++] =array1[start1];
                  start1++;
@@ -58,12 +72,13 @@ public class UnionIntersectionOfSortedArray {
             }
         }
 
+        System.out.println(" // OUTPUTS //");
         printArray("Intersection : ", intersactionArray);
         printArray("Union  : " , unionArray);
     }
     public static void printArray(String msg , int [] array)
     {
-        System.out.println(msg+ " ");
+        System.out.print(msg+ " ");
         Arrays.stream(array).filter(i-> i>0 ).forEach(x-> System.out.print(x+" "));
         System.out.println();
 
